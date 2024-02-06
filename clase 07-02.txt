@@ -1,0 +1,151 @@
+# OFICINAS - OBJETIVO Y VENTAS SON NULLEABLES
+insert into oficina (ciudad,id_oficina, objetivo, ventas) values ("Málaga",1, 100000, 180000);
+insert into oficina (ciudad,id_oficina, objetivo, ventas) values ("Madrid",2, 50000, 43000);
+insert into oficina (ciudad,id_oficina, objetivo, ventas) values ("Barcelona",3, 75000, 95000);
+insert into oficina (ciudad,id_oficina, objetivo, ventas) values ("Lugo",4, 65000, 62000);
+insert into oficina (ciudad,id_oficina) values ("Londres",5);
+
+# EMPLEADO APUNTA A OFICINA
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(1,"Pedro Ramirez", 26,"El palo",'2000-08-03',"vendedor",12000,13000,"Pedro Ramirez",1);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(2,"Rocio Porras", 36,"Gran vía",'2006-10-03',"vendedor",14000,15000,"Rocio Porras",2);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(3,"Andres Ruiz", 46,"Gran vía",'2011-04-03',"vendedor",8000,7000,"Rocio Porras",2);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(4,"Maria Gonzalez", 22,"Larios",'2000-04-29',"vendedor",16000,15000,'María González',1);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(5,"Sergio Perez", 32,"Gran vía",'2011-12-03',"vendedor",8500,9600,"Rocio Porras",2);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(6,"Luisa Carranza", 42,"las Ramblas",'2008-10-03',"vendedor",9600,12600,'Luisa Carranza',3);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(7,"Santiago Abascal", 29,"Larios",'2005-06-03',"vendedor",6400,3000,'María González',1);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(8,"Ramon Fernandez", 39,"las Ramblas",'2013-10-03',"vendedor",17000,8000,'Sra. Carranza',3);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(9,"Manuel Ronaldo", 49,"las Ramblas",'2013-10-03',"vendedor",12000,1000,'Luisa Carranza',3);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(10,"Vinicius", 25,"O Grove",'2009-04-23',"vendedor",8600,9600,'Vinicius',4);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(11,"Hamilton", 35,"Larios",'2010-01-08',"vendedor",9700,12000,"Pedro Ramirez",1);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(12,"Messi", 45,"O Grove",'2009-04-23',"vendedor",8000,6400,'Vinicius',4);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(13,"Pau Gasol", 56,"O Grove",'2014-04-23',"vendedor",14000,18000,'Vinicius',4);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(14,"Dani Alves", 61,"Gran vía",'2016-10-03',"vendedor",9000,9000,"Porras",2);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(15,"Pedro Sanchez", 23,"O Grove",'2019-04-23',"vendedor",4000,4600,'Vinicius',4);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(16,"Jennifer Lopez", 33,"Larios",'2020-10-03',"vendedor",7000,9000,"Pedro Ramirez",1);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(17,"Pamela Langer", 43,"the city",'2023-01-23',"vendedor",8600,1200,'Pamela Langer',5);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(18,"Albert Einstein", 19,"las Ramblas",'2018-10-03',"vendedor",12000,11000,'Luisa Carranza',3);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(19,"Dani deVito", 55,"Gran vía",'2022-07-03',"vendedor",12300,20000,"Rocio Porras",2);
+insert into empleado (dni, nombre, edad, tienda, fecha_incorporacion, cargo, cuota, ventas, jefe,id_oficina) values 
+(20,"Ana de Armas", 57,"las Ramblas",'2023-10-03',"vendedor",12000,18000,'Luisa Carranza',3);
+
+# PRODUCTO - cantidad es nulleable.
+insert into producto (id_fab, id_prod, precio, cantidad) values (1,1,10,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (1,2,30,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (1,3,50,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (1,4,70,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (1,5,90,1000);
+
+insert into producto (id_fab, id_prod, precio, cantidad) values (2,10,11,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (2,11,21,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (2,12,31,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (2,13,41,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (2,14,51,1000);
+
+insert into producto (id_fab, id_prod, precio, cantidad) values (3,11,13,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (3,12,23,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (3,13,33,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (3,14,43,1000);
+insert into producto (id_fab, id_prod, precio, cantidad) values (3,15,53,1000);
+
+insert into producto (id_fab, id_prod, precio) values (1,6,110);
+insert into producto (id_fab, id_prod, precio) values (1,7,130);
+insert into producto (id_fab, id_prod, precio) values (1,8,150);
+insert into producto (id_fab, id_prod, precio) values (1,9,170);
+insert into producto (id_fab, id_prod, precio) values (1,10,190);
+
+# PEDIDO 
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (1,'2020-01-12',1,1);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (2,'2018-01-12',2,1);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (3,'2017-05-12',1,2);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (4,'2019-01-12',2,2);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (5,'2019-01-12',5,8);
+
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (6,'2021-01-12',4,8);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (7,'2020-01-12',3,10);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (8,'2023-01-12',12,5);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (9,'2022-01-12',7,5);
+insert into pedido (num_pedido, fecha_realizacion, id_cliente, id_empleado) values (10,'2022-01-12',16,1);
+
+# ASESORA
+insert into asesora (id_cliente, id_empleado) values (1,1);
+insert into asesora (id_cliente, id_empleado) values (2,1);
+insert into asesora (id_cliente, id_empleado) values (3,1);
+insert into asesora (id_cliente, id_empleado) values (1,2);
+insert into asesora (id_cliente, id_empleado) values (1,3);
+
+insert into asesora (id_cliente, id_empleado) values (19,11);
+insert into asesora (id_cliente, id_empleado) values (14,12);
+insert into asesora (id_cliente, id_empleado) values (8,6);
+insert into asesora (id_cliente, id_empleado) values (6,6);
+insert into asesora (id_cliente, id_empleado) values (8,4);
+
+
+# INCLUYE
+insert into incluye (id_fab,id_prod,num_pedido) values (1,1,2);
+insert into incluye (id_fab,id_prod,num_pedido) values (1,3,2);
+insert into incluye (id_fab,id_prod,num_pedido) values (2,12,2);
+insert into incluye (id_fab,id_prod,num_pedido) values (3,13,2);
+insert into incluye (id_fab,id_prod,num_pedido) values (1,5,2);
+
+insert into incluye (id_fab,id_prod,num_pedido) values (1,1,1);
+insert into incluye (id_fab,id_prod,num_pedido) values (1,3,1);
+insert into incluye (id_fab,id_prod,num_pedido) values (2,10,1);
+insert into incluye (id_fab,id_prod,num_pedido) values (3,15,1);
+insert into incluye (id_fab,id_prod,num_pedido) values (2,13,1);
+
+insert into incluye (id_fab,id_prod,num_pedido) values (1,1,3);
+insert into incluye (id_fab,id_prod,num_pedido) values (3,13,3);
+insert into incluye (id_fab,id_prod,num_pedido) values (2,10,3);
+insert into incluye (id_fab,id_prod,num_pedido) values (3,15,3);
+insert into incluye (id_fab,id_prod,num_pedido) values (2,13,3);
+
+insert into incluye (id_fab,id_prod,num_pedido) values (2,12,7);
+insert into incluye (id_fab,id_prod,num_pedido) values (2,10,7);
+insert into incluye (id_fab,id_prod,num_pedido) values (1,5,7);
+insert into incluye (id_fab,id_prod,num_pedido) values (3,15,7);
+insert into incluye (id_fab,id_prod,num_pedido) values (1,3,7);
+
+# SELECCIONA
+insert into selecciona (id_cli, id_fab, id_prod) values (1,1,1);
+insert into selecciona (id_cli, id_fab, id_prod) values (1,2,11);
+insert into selecciona (id_cli, id_fab, id_prod) values (1,2,13);
+insert into selecciona (id_cli, id_fab, id_prod) values (1,1,2);
+insert into selecciona (id_cli, id_fab, id_prod) values (1,2,14);
+
+insert into selecciona (id_cli, id_fab, id_prod) values (5,2,11);
+insert into selecciona (id_cli, id_fab, id_prod) values (5,2,12);
+insert into selecciona (id_cli, id_fab, id_prod) values (5,2,14);
+insert into selecciona (id_cli, id_fab, id_prod) values (5,1,1);
+insert into selecciona (id_cli, id_fab, id_prod) values (9,1,1);
+
+insert into selecciona (id_cli, id_fab, id_prod) values (17,1,1);
+insert into selecciona (id_cli, id_fab, id_prod) values (17,1,2);
+insert into selecciona (id_cli, id_fab, id_prod) values (9,3,15);
+insert into selecciona (id_cli, id_fab, id_prod) values (9,3,12);
+insert into selecciona (id_cli, id_fab, id_prod) values (7,3,11);
+
+insert into selecciona (id_cli, id_fab, id_prod) values (5,1,6);
+insert into selecciona (id_cli, id_fab, id_prod) values (13,2,11);
+insert into selecciona (id_cli, id_fab, id_prod) values (5,3,11);
+insert into selecciona (id_cli, id_fab, id_prod) values (20,1,1);
+insert into selecciona (id_cli, id_fab, id_prod) values (20,2,11);
+
