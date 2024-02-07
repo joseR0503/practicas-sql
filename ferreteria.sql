@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-02-2024 a las 15:54:06
+-- Tiempo de generación: 07-02-2024 a las 10:18:36
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -44,6 +44,32 @@ CREATE TABLE `cliente` (
   `lim_credito` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`nombre`, `id_cliente`, `lim_credito`) VALUES
+('Pedro Ramirez', 1, 1000),
+('Rocio Porras', 2, 2000),
+('Andres Ruiz', 3, 6000),
+('Maria Gonzalez', 4, 4000),
+('Sergio Perez', 5, 2000),
+('Luisa Carranza', 6, 1000),
+('Santiago Abascal', 7, 1000),
+('Ramon Fernandez', 8, 4000),
+('Manuel Ronaldo', 9, 6000),
+('Vinicius', 10, 1000),
+('Hamilton', 11, 5000),
+('Messi', 12, 2000),
+('Pau Gasol', 13, 1000),
+('Dani Alves', 14, 1000),
+('Pedro Sanchez', 15, 1000),
+('Jennifer Lopez', 16, 1000),
+('Pamela Langer', 17, 2000),
+('Albert Einstein', 18, 1000),
+('Dani deVito', 19, 5000),
+('Ana de Armas', 20, 1000);
+
 -- --------------------------------------------------------
 
 --
@@ -62,6 +88,32 @@ CREATE TABLE `empleado` (
   `jefe` varchar(30) NOT NULL,
   `id_oficina` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`dni`, `nombre`, `edad`, `tienda`, `fecha_incorporacion`, `cargo`, `cuota`, `ventas`, `jefe`, `id_oficina`) VALUES
+(1, 'Pedro Ramirez', 26, 'El palo', '2000-08-03', 'vendedor', 12000, 13000, 'Pedro Ramirez', 1),
+(2, 'Rocio Porras', 36, 'Gran vía', '2006-10-03', 'vendedor', 14000, 15000, 'Rocio Porras', 2),
+(3, 'Andres Ruiz', 46, 'Gran vía', '2011-04-03', 'vendedor', 8000, 7000, 'Rocio Porras', 2),
+(4, 'Maria Gonzalez', 22, 'Larios', '2000-04-29', 'vendedor', 16000, 15000, 'María González', 1),
+(5, 'Sergio Perez', 32, 'Gran vía', '2011-12-03', 'vendedor', 8500, 9600, 'Rocio Porras', 2),
+(6, 'Luisa Carranza', 42, 'las Ramblas', '2008-10-03', 'vendedor', 9600, 12600, 'Luisa Carranza', 3),
+(7, 'Santiago Abascal', 29, 'Larios', '2005-06-03', 'vendedor', 6400, 3000, 'María González', 1),
+(8, 'Ramon Fernandez', 39, 'las Ramblas', '2013-10-03', 'vendedor', 17000, 8000, 'Sra. Carranza', 3),
+(9, 'Manuel Ronaldo', 49, 'las Ramblas', '2013-10-03', 'vendedor', 12000, 1000, 'Luisa Carranza', 3),
+(10, 'Vinicius', 25, 'O Grove', '2009-04-23', 'vendedor', 8600, 9600, 'Vinicius', 4),
+(11, 'Hamilton', 35, 'Larios', '2010-01-08', 'vendedor', 9700, 12000, 'Pedro Ramirez', 1),
+(12, 'Messi', 45, 'O Grove', '2009-04-23', 'vendedor', 8000, 6400, 'Vinicius', 4),
+(13, 'Pau Gasol', 56, 'O Grove', '2014-04-23', 'vendedor', 14000, 18000, 'Vinicius', 4),
+(14, 'Dani Alves', 61, 'Gran vía', '2016-10-03', 'vendedor', 9000, 9000, 'Porras', 2),
+(15, 'Pedro Sanchez', 23, 'O Grove', '2019-04-23', 'vendedor', 4000, 4600, 'Vinicius', 4),
+(16, 'Jennifer Lopez', 33, 'Larios', '2020-10-03', 'vendedor', 7000, 9000, 'Pedro Ramirez', 1),
+(17, 'Pamela Langer', 43, 'the city', '2023-01-23', 'vendedor', 8600, 1200, 'Pamela Langer', 5),
+(18, 'Albert Einstein', 19, 'las Ramblas', '2018-10-03', 'vendedor', 12000, 11000, 'Luisa Carranza', 3),
+(19, 'Dani deVito', 55, 'Gran vía', '2022-07-03', 'vendedor', 12300, 20000, 'Rocio Porras', 2),
+(20, 'Ana de Armas', 57, 'las Ramblas', '2023-10-03', 'vendedor', 12000, 18000, 'Luisa Carranza', 3);
 
 -- --------------------------------------------------------
 
@@ -88,6 +140,17 @@ CREATE TABLE `oficina` (
   `ventas` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `oficina`
+--
+
+INSERT INTO `oficina` (`ciudad`, `id_oficina`, `objetivo`, `ventas`) VALUES
+('Málaga', 1, 100000, 180000),
+('Madrid', 2, 50000, 43000),
+('Barcelona', 3, 75000, 95000),
+('Lugo', 4, 65000, 62000),
+('Londres', 5, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -113,6 +176,32 @@ CREATE TABLE `producto` (
   `precio` int(11) NOT NULL,
   `cantidad` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id_fab`, `id_prod`, `precio`, `cantidad`) VALUES
+(1, 1, 10, 1000),
+(1, 2, 30, 1000),
+(1, 3, 50, 1000),
+(1, 4, 70, 1000),
+(1, 5, 90, 1000),
+(1, 6, 110, NULL),
+(1, 7, 130, NULL),
+(1, 8, 150, NULL),
+(1, 9, 170, NULL),
+(1, 10, 190, NULL),
+(2, 10, 11, 1000),
+(2, 11, 21, 1000),
+(2, 12, 31, 1000),
+(2, 13, 41, 1000),
+(2, 14, 51, 1000),
+(3, 11, 13, 1000),
+(3, 12, 23, 1000),
+(3, 13, 33, 1000),
+(3, 14, 43, 1000),
+(3, 15, 53, 1000);
 
 -- --------------------------------------------------------
 
